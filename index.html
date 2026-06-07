@@ -1,56 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About wowori</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrambleTextPlugin.min.js"></script>
-</head>
-<body>
-    <canvas id="stars"></canvas>
-    <div class="container">
-        <section id="hero" class="section">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>wowori // trash coder</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;600;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-inner">
+                <span class="nav-logo">~/$</span>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">about</a>
+                    <a href="#projects" class="nav-link">projects</a>
+                    <a href="#contact" class="nav-link">contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <section id="hero" class="section hero">
+            <div class="hero-bg"></div>
             <div class="hero-content">
-                <img src="https://avatars.githubusercontent.com/u/153320915?v=4" alt="Avatar" class="avatar">
-                <a href="https://github.com/wowori" target="_blank" class="hero-link"><h3 class="hero-title fade-in">wowori</h3></a>
+                <div class="terminal">
+                    <div class="terminal-bar">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">bash</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p>
+                            <span class="prompt">wowori@github:~$</span>
+                            <span class="typing"></span
+                            ><span class="cursor">_</span>
+                        </p>
+                        <p class="terminal-line hidden date-output">
+                            <span class="output"></span>
+                        </p>
+                        <p class="terminal-line hidden">
+                            <span class="prompt">wowori@github:~$</span>
+                            <span
+                                class="cmd typing-cmd"
+                                data-text="whoami"
+                            ></span
+                            ><span class="cursor c2">_</span>
+                        </p>
+                        <p class="terminal-line hidden">
+                            <span class="output"
+                                >wowori — vibecoder, trash no ai coder</span
+                            >
+                        </p>
+                        <p class="terminal-line hidden">
+                            <span class="prompt">wowori@github:~$</span>
+                            <span
+                                class="cmd typing-cmd"
+                                data-text="cat /etc/bio"
+                            ></span
+                            ><span class="cursor c3">_</span>
+                        </p>
+                        <p class="terminal-line hidden">
+                            <span class="output"
+                                >web dev, html/css/js, electron, node, python,
+                                lua/love2d</span
+                            >
+                        </p>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a
+                        href="https://github.com/wowori"
+                        target="_blank"
+                        class="btn btn-primary"
+                        >github</a
+                    >
+                    <a href="#projects" class="btn btn-outline">projects</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">scroll v</div>
+        </section>
+
+        <section id="about" class="section about">
+            <h2 class="section-title"><span class="accent">#</span> about</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">*</div>
+                    <h3>vibecoder</h3>
+                    <p>
+                        i make stuff that works. mostly. html, css, js,
+                        electron, node, python, lua.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">></div>
+                    <h3>trash coder</h3>
+                    <p>
+                        proudly trash. code may be messy but it runs. thats what
+                        matters.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">&</div>
+                    <h3>terminal enthusiast</h3>
+                    <p>
+                        dotfiles, neovim, minimalism. if it doesnt run in a
+                        terminal i dont want it.
+                    </p>
+                </div>
             </div>
         </section>
-        <section id="about" class="section">
-            <h1 class="fade-in">about me</h1>
-            <p class="fade-in">i am a web vibecoder.</p>
-        </section>
-        <section id="skills" class="section">
-            <h1 class="fade-in">skills</h1>
-            <ul class="fade-in">
-                <li>html & css</li>
-                <li>javascript</li>
-                <li>electron.js</li>
-                <li>node.js</li>
-                <li>python</li>
-                <li>lua/love2d</li>
-            </ul>
-        </section>
-        <section id="projects" class="section">
-            <h1 class="fade-in">projects</h1>
-            <div class="project">
-                <h2 class="fade-in">project one</h2>
-                <p class="fade-in">my porfolio :).</p>
-            </div>
-            <div class="project">
-                <h2 class="fade-in">project two</h2>
-                <p class="fade-in">i plan to create a music player with support for all modern streaming services in one app.</p>
+
+        <section id="projects" class="section projects">
+            <h2 class="section-title">
+                <span class="accent">#</span> pinned projects
+            </h2>
+            <div class="projects-grid" id="projects-grid">
+                <div class="project-card skeleton">
+                    <div class="skeleton-line" style="width: 60%"></div>
+                    <div class="skeleton-line" style="width: 80%"></div>
+                    <div class="skeleton-line" style="width: 40%"></div>
+                </div>
+                <div class="project-card skeleton">
+                    <div class="skeleton-line" style="width: 60%"></div>
+                    <div class="skeleton-line" style="width: 80%"></div>
+                    <div class="skeleton-line" style="width: 40%"></div>
+                </div>
+                <div class="project-card skeleton">
+                    <div class="skeleton-line" style="width: 60%"></div>
+                    <div class="skeleton-line" style="width: 80%"></div>
+                    <div class="skeleton-line" style="width: 40%"></div>
+                </div>
             </div>
         </section>
-        <section id="contact" class="section">
-            <h1 class="fade-in">contact</h1>
-            <p class="fade-in">feel free to reach out via email at vonlondm@inbox.ru or discord vonlonxd.</p>
+
+        <section id="contact" class="section contact">
+            <h2 class="section-title"><span class="accent">#</span> contact</h2>
+            <div class="contact-links">
+                <a href="mailto:vonlondm@inbox.ru" class="contact-item">
+                    <span class="contact-icon">@</span>
+                    <span>vonlondm@inbox.ru</span>
+                </a>
+                <a
+                    href="https://discord.com/users/vonlonxd"
+                    target="_blank"
+                    class="contact-item"
+                >
+                    <span class="contact-icon">#</span>
+                    <span>vonlonxd</span>
+                </a>
+                <a
+                    href="https://github.com/wowori"
+                    target="_blank"
+                    class="contact-item"
+                >
+                    <span class="contact-icon">%</span>
+                    <span>github/wowori</span>
+                </a>
+            </div>
+            <p class="contact-footer">—— EOF ——</p>
         </section>
-    </div>
-    <script src="script.js"></script>
-</body>
+
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        <div class="blob blob-5"></div>
+        <div id="cursor-glow"></div>
+        <script src="script.js"></script>
+    </body>
 </html>
